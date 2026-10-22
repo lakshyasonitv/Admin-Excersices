@@ -60,7 +60,6 @@ LEN({!$Record.Email}) &lt; 20,
         <connector>
             <targetReference>email_new</targetReference>
         </connector>
-        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Email</field>
@@ -73,5 +72,5 @@ LEN({!$Record.Email}) &lt; 20,
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
