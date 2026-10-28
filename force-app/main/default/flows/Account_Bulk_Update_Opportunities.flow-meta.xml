@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Send_Error_Email_to_Admin</name>
+        <label>Send Error Email to Admin</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Error_Screen</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value>
+                <collectionElements>
+                    <elementReference>$User.Email</elementReference>
+                </collectionElements>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+                <stringValue>Flow Execution Failure: Bulk Update Opportunities</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>{!Adminerroremailbody}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>false</booleanValue>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>3.0.1</versionString>
+    </actionCalls>
     <apiVersion>68.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
@@ -55,8 +105,29 @@
             <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
         </value>
     </customProperties>
+    <dynamicChoiceSets>
+        <name>new_stage_picklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ForecastCategory</picklistField>
+        <picklistObject>OpportunityStage</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>stage_picklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>StageName</picklistField>
+        <picklistObject>Opportunity</picklistObject>
+    </dynamicChoiceSets>
     <ends>
         <name>END_ELEMENT_1</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
+    <ends>
+        <name>END_ELEMENT_2</name>
         <locationX>0</locationX>
         <locationY>0</locationY>
     </ends>
@@ -132,6 +203,9 @@
         <connector>
             <targetReference>d</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Send_Error_Email_to_Admin</targetReference>
+        </faultConnector>
         <inputReference>oppCollectionToUpdate</inputReference>
     </recordUpdates>
     <screens>
@@ -190,12 +264,39 @@
         </fields>
         <fields>
             <name>New_Stage</name>
-            <choiceReferences>Opportunity_StageName</choiceReferences>
+            <choiceReferences>stage_picklist</choiceReferences>
             <dataType>String</dataType>
             <fieldText>New Stage (Optional)</fieldText>
             <fieldType>DropdownBox</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_Screen</name>
+        <label>Error Screen</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>END_ELEMENT_2</targetReference>
+        </connector>
+        <fields>
+            <name>errormessage</name>
+            <fieldText>&lt;p&gt;⚠️ Unable to Update Opportunities&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;An error occurred while updating the selected opportunities, and no changes were saved.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The System Administrator has been notified automatically.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Reason / Error Details:&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
                     <stringValue>top</stringValue>
@@ -294,6 +395,22 @@
         </connector>
     </start>
     <status>Active</status>
+    <textTemplates>
+        <name>Adminerroremailbody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello Administrator,
+
+An error occurred during the execution of the &quot;Account - Bulk Update Opportunities&quot; flow.
+
+Running User: {!$User.FirstName} {!$User.LastName} ({!$User.Username})
+User Email: {!$User.Email}
+Timestamp: {!$Flow.CurrentDateTime}
+
+Error Details:
+{!$Flow.FaultMessage}
+
+Please review the affected records and user inputs.</text>
+    </textTemplates>
     <variables>
         <name>oppCollectionToUpdate</name>
         <dataType>SObject</dataType>
