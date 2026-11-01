@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_Submitter_of_Discount_Approval</fullName>
+        <description>Notify Submitter of Discount Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_Discount_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Submitter_of_Discount_Rejection</fullName>
+        <description>Notify Submitter of Discount Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_Discount_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Discount_Approved_to_True</fullName>
+        <field>Discount_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Discount Approved to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>
