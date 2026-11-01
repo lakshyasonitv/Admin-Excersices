@@ -9,7 +9,13 @@
             "LastName": "Boxer",
             "Company": "Farmers Coop. of Florida",
             "Status": "Working - Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "bertha@fcof.net",
+            "Phone": "(850) 644-4200",
+            "Title": "Director of Vendor Relations",
+            "Industry": "Agriculture",
+            "Rating": "Hot",
+            "AnnualRevenue": 900750000
         },
         {
             "attributes": {
@@ -20,7 +26,10 @@
             "LastName": "Cotton",
             "Company": "Abbott Insurance",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "pcotton@abbottins.net",
+            "Phone": "(703) 757-1000",
+            "Title": "CFO"
         },
         {
             "attributes": {
@@ -31,7 +40,10 @@
             "LastName": "Glimpse",
             "Company": "Jackson Controls",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Phone Inquiry"
+            "LeadSource": "Phone Inquiry",
+            "Email": "jeffg@jackson.com",
+            "Phone": "886-2-25474189",
+            "Title": "SVP, Procurement"
         },
         {
             "attributes": {
@@ -42,7 +54,10 @@
             "LastName": "Braund",
             "Company": "Metropolitan Health Services",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "likeb@metro.com",
+            "Phone": "(410) 381-2334",
+            "Title": "VP, Technology"
         },
         {
             "attributes": {
@@ -53,7 +68,10 @@
             "LastName": "Feager",
             "Company": "International Shipping Co.",
             "Status": "Working - Contacted",
-            "LeadSource": "Partner Referral"
+            "LeadSource": "Partner Referral",
+            "Email": "patricia_feager@is.com",
+            "Phone": "(336) 777-1970",
+            "Title": "CEO"
         },
         {
             "attributes": {
@@ -64,7 +82,10 @@
             "LastName": "Mcclure",
             "Company": "Cadinal Inc.",
             "Status": "Working - Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "brenda@cardinal.net",
+            "Phone": "(847) 262-5000",
+            "Title": "CFO"
         },
         {
             "attributes": {
@@ -75,7 +96,10 @@
             "LastName": "Maccleod",
             "Company": "Emerson Transport",
             "Status": "Working - Contacted",
-            "LeadSource": "Phone Inquiry"
+            "LeadSource": "Phone Inquiry",
+            "Email": "violetm@emersontransport.com",
+            "Phone": "(770) 395-2370",
+            "Title": "VP, Finance"
         },
         {
             "attributes": {
@@ -86,7 +110,10 @@
             "LastName": "Snyder",
             "Company": "TNR Corp.",
             "Status": "Working - Contacted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "ksynder@tnr.net",
+            "Phone": "(860) 273-0123",
+            "Title": "Regional General Manager"
         },
         {
             "attributes": {
@@ -97,7 +124,10 @@
             "LastName": "James",
             "Company": "Delphi Chemicals",
             "Status": "Working - Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "tom.james@delphi.chemicals.com",
+            "Phone": "(952) 346-3500",
+            "Title": "SVP, Production"
         },
         {
             "attributes": {
@@ -108,7 +138,10 @@
             "LastName": "Brownell",
             "Company": "Western Telecommunications Corp.",
             "Status": "Working - Contacted",
-            "LeadSource": "Partner Referral"
+            "LeadSource": "Partner Referral",
+            "Email": "shellyb@westerntelecom.com",
+            "Phone": "(408) 326-9000",
+            "Title": "SVP, Technology"
         },
         {
             "attributes": {
@@ -119,7 +152,10 @@
             "LastName": "Owenby",
             "Company": "Hendrickson Trading",
             "Status": "Closed - Not Converted",
-            "LeadSource": "Partner Referral"
+            "LeadSource": "Partner Referral",
+            "Email": "pam_owenby@hendricksontrading.com",
+            "Phone": "(570) 326-1571",
+            "Title": "SVP, Technology"
         },
         {
             "attributes": {
@@ -130,7 +166,10 @@
             "LastName": "May",
             "Company": "Greenwich Media",
             "Status": "Working - Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "norm_may@greenwich.net",
+            "Phone": "(419) 289-3555",
+            "Title": "VP, Facilities"
         },
         {
             "attributes": {
@@ -141,7 +180,10 @@
             "LastName": "Stumuller",
             "Company": "Pyramid Construction Inc.",
             "Status": "Closed - Converted",
-            "LeadSource": "Phone Inquiry"
+            "LeadSource": "Phone Inquiry",
+            "Email": "pat@pyramid.net",
+            "Phone": "33562156600",
+            "Title": "SVP, Administration and Finance"
         },
         {
             "attributes": {
@@ -152,7 +194,10 @@
             "LastName": "Young",
             "Company": "Dickenson plc",
             "Status": "Closed - Converted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "a_young@dickenson.com",
+            "Phone": "(620) 241-6200",
+            "Title": "SVP, Operations"
         },
         {
             "attributes": {
@@ -163,7 +208,10 @@
             "LastName": "Akin",
             "Company": "Aethna Home Products",
             "Status": "Working - Contacted",
-            "LeadSource": "Partner Referral"
+            "LeadSource": "Partner Referral",
+            "Email": "kakin@athenahome.com",
+            "Phone": "(434) 369-3100",
+            "Title": "Director, Warehouse Mgmt"
         },
         {
             "attributes": {
@@ -174,7 +222,10 @@
             "LastName": "Monaco",
             "Company": "Blues Entertainment Corp.",
             "Status": "Working - Contacted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "david@blues.com",
+            "Phone": "(033) 452-1299",
+            "Title": "CFO"
         },
         {
             "attributes": {
@@ -185,7 +236,10 @@
             "LastName": "Crenshaw",
             "Company": "Ace Iron and Steel Inc.",
             "Status": "Closed - Not Converted",
-            "LeadSource": "Phone Inquiry"
+            "LeadSource": "Phone Inquiry",
+            "Email": "carolync@aceis.com",
+            "Phone": "(251) 679-2200",
+            "Title": "VP, Technology"
         },
         {
             "attributes": {
@@ -196,7 +250,13 @@
             "LastName": "Rogers",
             "Company": "Burlington Textiles Corp of America",
             "Status": "Closed - Converted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "jrogers@btca.com",
+            "Phone": "(336) 222-7000",
+            "Title": "VP, Facilities",
+            "Industry": "Apparel",
+            "Rating": "Warm",
+            "AnnualRevenue": 350000000
         },
         {
             "attributes": {
@@ -207,7 +267,10 @@
             "LastName": "Dadio Jr",
             "Company": "Zenith Industrial Partners",
             "Status": "Closed - Not Converted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "bill_dadio@zenith.com",
+            "Phone": "(614) 431-5000",
+            "Title": "CFO"
         },
         {
             "attributes": {
@@ -218,7 +281,10 @@
             "LastName": "Luce",
             "Company": "Pacific Retail Group",
             "Status": "Closed - Not Converted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "eluce@pacificretail.com",
+            "Phone": "(781) 270-6500",
+            "Title": "CEO"
         },
         {
             "attributes": {
@@ -229,7 +295,10 @@
             "LastName": "Eberhard",
             "Company": "Highland Manufacturing Ltd.",
             "Status": "Working - Contacted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "sandra_e@highland.net",
+            "Phone": "(626) 440-0700",
+            "Title": "VP, Production"
         },
         {
             "attributes": {
@@ -240,7 +309,10 @@
             "LastName": "Bair",
             "Company": "American Banking Corp.",
             "Status": "Working - Contacted",
-            "LeadSource": "Purchased List"
+            "LeadSource": "Purchased List",
+            "Email": "bblair@abankingco.com",
+            "Phone": "(610) 265-9100",
+            "Title": "VP, Administration"
         },
         {
             "attributes": {
@@ -251,7 +323,8 @@
             "LastName": "user",
             "Company": "xyz",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Bill Board"
+            "LeadSource": "Bill Board",
+            "Phone": "1234567890"
         },
         {
             "attributes": {
@@ -262,7 +335,9 @@
             "LastName": "Soni",
             "Company": "xyz",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Webinar"
+            "LeadSource": "Webinar",
+            "Email": "lakshy.soni@thinkvibes.com",
+            "AnnualRevenue": 300
         },
         {
             "attributes": {
@@ -273,7 +348,8 @@
             "LastName": "nehra",
             "Company": "xyz",
             "Status": "Unqualified",
-            "LeadSource": "Webinar"
+            "LeadSource": "Webinar",
+            "Phone": "1234567890"
         },
         {
             "attributes": {
@@ -284,7 +360,8 @@
             "LastName": "k",
             "Company": "Thinkvibes",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "gk@thinkvibes.comz"
         },
         {
             "attributes": {
@@ -295,7 +372,8 @@
             "LastName": "maam",
             "Company": "Thinkvibes",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "s@thinkvibes.comzz"
         },
         {
             "attributes": {
@@ -306,7 +384,8 @@
             "LastName": "bro",
             "Company": "Thinkvibes",
             "Status": "Open - Not Contacted",
-            "LeadSource": "Web"
+            "LeadSource": "Web",
+            "Email": "lg@thinkvibes.comz"
         }
     ]
 }
